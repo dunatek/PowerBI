@@ -1,0 +1,72 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [
+    "PBI_CV_16948668_E17D_454B_8664_2F2C470EA8C1"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "f8978d98d55315213872",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"5befae370bd6e55aaba3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":64.68590556920336,\"y\":409.2627486974597,\"z\":1,\"width\":457.7771778743622,\"height\":186.593958372702,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"PBI_CV_16948668_E17D_454B_8664_2F2C470EA8C1\",\"projections\":{\"category\":[{\"queryRef\":\"technology-adoption-by-households-in-the-united-states.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"technology-adoption-by-households-in-the-united-states\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Year\"},\"Name\":\"technology-adoption-by-households-in-the-united-states.Year\",\"NativeReferenceName\":\"Year\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 186.59,
+          "width": 457.78,
+          "x": 64.69,
+          "y": 409.26,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"65db4b8062d6a70e1a2b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":592.1248279027077,\"y\":359.50435979807247,\"z\":3,\"width\":534.9026806684124,\"height\":250.03590421942067,\"tabOrder\":3}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"technology-adoption-by-households-in-the-united-states.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(technology-adoption-by-households-in-the-united-states.Technology Diffusion (Comin and Hobijn (2004) and others))\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"technology-adoption-by-households-in-the-united-states\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Year\"},\"Name\":\"technology-adoption-by-households-in-the-united-states.Year\",\"NativeReferenceName\":\"Sum of Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Technology Diffusion (Comin and Hobijn (2004) and others)\"}},\"Function\":0},\"Name\":\"Sum(technology-adoption-by-households-in-the-united-states.Technology Diffusion (Comin and Hobijn (2004) and others))\",\"NativeReferenceName\":\"Sum of Technology Diffusion (Comin and Hobijn (2004) and others)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Technology Diffusion (Comin and Hobijn (2004) and others)\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"c4481badb60b4761862b\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"technology-adoption-by-households-in-the-united-states\"}},\"Property\":\"Entity\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"technology-adoption-by-households-in-the-united-states\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Entity\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Cellular phone'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 250.04,
+          "width": 534.90,
+          "x": 592.12,
+          "y": 359.50,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"9489807263ce18721050\",\"layouts\":[{\"id\":0,\"position\":{\"x\":23.635234727208918,\"y\":67.17382501417272,\"z\":0,\"width\":456.5332181518775,\"height\":186.593958372702,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"technology-adoption-by-households-in-the-united-states.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(technology-adoption-by-households-in-the-united-states.Technology Diffusion (Comin and Hobijn (2004) and others))\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"technology-adoption-by-households-in-the-united-states\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Year\"},\"Name\":\"technology-adoption-by-households-in-the-united-states.Year\",\"NativeReferenceName\":\"Sum of Year\"},{\"Arithmetic\":{\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Technology Diffusion (Comin and Hobijn (2004) and others)\"}},\"Function\":0}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Technology Diffusion (Comin and Hobijn (2004) and others)\"}},\"Function\":0}},\"Scope\":[]}},\"Operator\":3},\"Name\":\"Sum(technology-adoption-by-households-in-the-united-states.Technology Diffusion (Comin and Hobijn (2004) and others))\",\"NativeReferenceName\":\"%GT Sum of Technology Diffusion (Comin and Hobijn (2004) and others)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Year\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"start\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"categoryAxis\":[{\"properties\":{\"end\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"technology-adoption-by-households-in-the-united-states\"}},\"Property\":\"Year\"}},\"Function\":4}}}}}]}}}",
+          "filters": "[{\"name\":\"47adc3a6013161d30724\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"technology-adoption-by-households-in-the-united-states\"}},\"Property\":\"Entity\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"technology-adoption-by-households-in-the-united-states\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Entity\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Amazon Prime users'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"isHiddenInViewMode\":false},{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"technology-adoption-by-households-in-the-united-states\"}},\"Property\":\"Technology Diffusion (Comin and Hobijn (2004) and others)\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 186.59,
+          "width": 456.53,
+          "x": 23.64,
+          "y": 67.17,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b59c95d9b980590e3762\",\"layouts\":[{\"id\":0,\"position\":{\"x\":578.4412709553761,\"y\":77.12550279405015,\"z\":2,\"width\":534.9026806684124,\"height\":250.03590421942067,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"technology-adoption-by-households-in-the-united-states.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(technology-adoption-by-households-in-the-united-states.Technology Diffusion (Comin and Hobijn (2004) and others))\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"technology-adoption-by-households-in-the-united-states\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Year\"},\"Name\":\"technology-adoption-by-households-in-the-united-states.Year\",\"NativeReferenceName\":\"Sum of Year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Technology Diffusion (Comin and Hobijn (2004) and others)\"}},\"Function\":0},\"Name\":\"Sum(technology-adoption-by-households-in-the-united-states.Technology Diffusion (Comin and Hobijn (2004) and others))\",\"NativeReferenceName\":\"Sum of Technology Diffusion (Comin and Hobijn (2004) and others)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Technology Diffusion (Comin and Hobijn (2004) and others)\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"c4481badb60b4761862b\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"technology-adoption-by-households-in-the-united-states\"}},\"Property\":\"Entity\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"technology-adoption-by-households-in-the-united-states\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Entity\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Cable TV'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 250.04,
+          "width": 534.90,
+          "x": 578.44,
+          "y": 77.13,
+          "z": 2.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

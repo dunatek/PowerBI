@@ -1,0 +1,52 @@
+table technology-adoption-by-households-in-the-united-states
+	lineageTag: bcd3b51c-23b3-41cf-9f78-c3e8c3fc9340
+
+	column Entity
+		dataType: string
+		lineageTag: 72168d10-7ec8-48bb-b67c-ccf4fea25d26
+		summarizeBy: none
+		sourceColumn: Entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Code
+		dataType: string
+		lineageTag: 9b786d16-aa90-42c9-82fa-b5797160ce79
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: e6198664-f671-4015-a4e1-844f393edeb8
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Technology Diffusion (Comin and Hobijn (2004) and others)'
+		dataType: double
+		lineageTag: 00ce3fff-73df-404e-900a-99580528224b
+		summarizeBy: sum
+		sourceColumn: Technology Diffusion (Comin and Hobijn (2004) and others)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition technology-adoption-by-households-in-the-united-states = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://ourworldindata.org/grapher/technology-adoption-by-households-in-the-united-states.csv?v=1&csvType=full&useColumnShortNames=true"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Entity", type text}, {"Code", type text}, {"Year", Int64.Type}, {"Technology Diffusion (Comin and Hobijn (2004) and others)", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

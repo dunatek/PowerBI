@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "HR-TECH-RPT"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cf2ef032-7666-bd4a-4646-e977a9e91bcd"
+  }
+}
